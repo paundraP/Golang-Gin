@@ -26,6 +26,68 @@ This is the RESTful-API use Golang. With Gin and Gorm technology to make this pr
 
 - **internal/service**: Implements business logic and orchestrates interactions between repositories and handlers.
 
+## Project Structure 
+
+```mermaid
+graph TD
+    A[Project Root] --> B[cmd]
+    B --> BA[command.go]
+    
+    A --> C[go.mod]
+    A --> D[go.sum]
+    
+    A --> E[internal]
+    E --> F[config]
+    F --> FA[app_config.go]
+    F --> FB[database.go]
+    
+    E --> G[dto]
+    G --> GA[user_dto.go]
+    
+    E --> H[handlers]
+    H --> HA[user_handler.go]
+    
+    E --> I[middleware]
+    I --> IA[auth.go]
+    I --> IB[cors.go]
+    I --> IC[only_admin.go]
+    
+    E --> J[migration]
+    J --> JA[data]
+    JA --> JAA[users.json]
+    J --> JB[migration.go]
+    J --> JC[seed]
+    JC --> JCA[user.go]
+    J --> JD[seeder.go]
+    
+    E --> K[models]
+    K --> KA[user_model.go]
+    
+    E --> L[pkg]
+    L --> LA[jwtutils.go]
+    L --> LB[password.go]
+    L --> LC[s3aws.go]
+    
+    E --> M[repository]
+    M --> MA[user_repository.go]
+    
+    E --> N[router]
+    N --> NA[testing.go]
+    N --> NB[user_route.go]
+    
+    E --> O[services]
+    O --> OA[user_service.go]
+    
+    A --> P[main.go]
+
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
+    classDef file fill:#e3f2fd,stroke:#1976d2,stroke-width:1px;
+    classDef folder fill:#fff3e0,stroke:#f57c00,stroke-width:1px;
+
+    class A,B,E,F,G,H,I,J,JA,JC,K,L,M,N,O folder;
+    class BA,FA,FB,GA,HA,IA,IB,IC,JAA,JB,JCA,JD,KA,LA,LB,LC,MA,NA,NB,OA,C,D,P file;
+```
+
 ## 🌟 Features
 
 - Authentication use JWT
