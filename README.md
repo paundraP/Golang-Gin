@@ -82,7 +82,7 @@ AWS_SECRET_KEY=
 
 - If you dont configure the posgresql before, open the postgresql you installed before.
 
-``bash
+```bash
 psql -U postgres
 CREATE DATABASE name_of_db;
 \c name_of_db
@@ -102,3 +102,5 @@ go run main.go
 ```
 
 And be sure to specify any other minimum requirements like Prerequisite above.
+
+# Time to Explore!
