@@ -45,19 +45,19 @@ for the AWS S3 Setup, you can refer to this [blog](https://medium.com/geekcultur
 
 Simple, understandable installation instruction, go to your terminal and paste this!
 
-1. 
+1. Clone this repository
 
 ```bash
 git clone https://github.com/paundraP/RESTful-API-with-Golang.git
 ```
 
-2. 
+2. Go to the project folder
 
 ```bash 
 cd RESTful-API-with-Golang
 ```
 
-3. 
+3. Install package dependency for this project
 
 ```bash
 go mod tidy
@@ -84,11 +84,6 @@ AWS_SECRET_KEY=
 
 ``bash
 psql -U postgres
-```
-
-- Then, create the database.
-
-```bash
 CREATE DATABASE name_of_db;
 \c name_of_db
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
