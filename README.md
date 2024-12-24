@@ -26,32 +26,6 @@ This is the RESTful-API use Golang. With Gin and Gorm technology to make this pr
 
 - **internal/service**: Implements business logic and orchestrates interactions between repositories and handlers.
 
-## Project Structure 
-
-```mermaid
-graph TD
-    A[Project Root] --> B[cmd]
-    A --> main.go
-    A --> E[internal]
-    E --> F[config]
-    E --> G[dto]
-    E --> H[handlers]
-    E --> I[middleware]
-    E --> J[migration]
-    J --> JA[data]
-    J --> JC[seed]
-    E --> K[models]
-    E --> L[pkg]
-    E --> M[repository]
-    E --> N[router]
-    E --> O[services]
-
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
-    classDef folder fill:#fff3e0,stroke:#f57c00,stroke-width:1px;
-
-    class A,B,E,F,G,H,I,J,JA,JC,K,L,M,N,O folder;
-```
-
 ## 🌟 Features
 
 - Authentication use JWT
