@@ -32,6 +32,8 @@ This is the RESTful-API use Golang. With Gin and Gorm technology to make this pr
 - Authorization
 - Uploading use AWS S3
 
+This project implements authentication with user registration and login functionalities. It also includes authorization, restricting access to certain endpoints based on user roles, ensuring that only authorized users can access sensitive data. Additionally, users have the ability to upload a profile picture to personalize their accounts. 
+
 ## Prerequisite 🧰
 
 - Golang installed (im using v1.23.4)
