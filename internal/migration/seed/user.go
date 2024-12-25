@@ -5,8 +5,8 @@ import (
 	"errors"
 	"log"
 	"os"
-	"realtime-score/internal/models"
-	"realtime-score/internal/pkg"
+	"rest-api-go/internal/models"
+	"rest-api-go/internal/pkg"
 
 	"gorm.io/gorm"
 )

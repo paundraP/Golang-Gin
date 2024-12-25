@@ -1,7 +1,7 @@
 package migration
 
 import (
-	"realtime-score/internal/migration/seed"
+	"rest-api-go/internal/migration/seed"
 
 	"gorm.io/gorm"
 )

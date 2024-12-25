@@ -2,13 +2,13 @@ package config
 
 import (
 	"fmt"
-	"realtime-score/cmd"
-	handler "realtime-score/internal/handlers"
-	"realtime-score/internal/middleware"
-	"realtime-score/internal/pkg"
-	"realtime-score/internal/repository"
-	"realtime-score/internal/router"
-	"realtime-score/internal/services"
+	"rest-api-go/cmd"
+	handler "rest-api-go/internal/handlers"
+	"rest-api-go/internal/middleware"
+	"rest-api-go/internal/pkg"
+	"rest-api-go/internal/repository"
+	"rest-api-go/internal/router"
+	"rest-api-go/internal/services"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"

@@ -2,7 +2,7 @@ package router
 
 import (
 	"net/http"
-	"realtime-score/internal/middleware"
+	"rest-api-go/internal/middleware"
 
 	"github.com/gin-gonic/gin"
 )

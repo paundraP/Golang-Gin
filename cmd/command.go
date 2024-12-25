@@ -3,7 +3,7 @@ package cmd
 import (
 	"flag"
 	"log"
-	"realtime-score/internal/migration"
+	"rest-api-go/internal/migration"
 
 	"gorm.io/gorm"
 )

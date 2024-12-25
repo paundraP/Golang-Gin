@@ -3,7 +3,7 @@ package config
 import (
 	"fmt"
 	"os"
-	"realtime-score/internal/models"
+	"rest-api-go/internal/models"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

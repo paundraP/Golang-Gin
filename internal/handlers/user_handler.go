@@ -2,8 +2,8 @@ package handler
 
 import (
 	"net/http"
-	"realtime-score/internal/dto"
-	"realtime-score/internal/services"
+	"rest-api-go/internal/dto"
+	"rest-api-go/internal/services"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator"

@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"realtime-score/internal/dto"
-	"realtime-score/internal/models"
+	"rest-api-go/internal/dto"
+	"rest-api-go/internal/models"
 
 	"gorm.io/gorm"
 )

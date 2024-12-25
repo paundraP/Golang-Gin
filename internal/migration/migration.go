@@ -2,7 +2,7 @@ package migration
 
 import (
 	"log"
-	"realtime-score/internal/models"
+	"rest-api-go/internal/models"
 
 	"gorm.io/gorm"
 )

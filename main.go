@@ -1,7 +1,7 @@
 package main
 
 import (
-	"realtime-score/internal/config"
+	"rest-api-go/internal/config"
 )
 
 func main() {

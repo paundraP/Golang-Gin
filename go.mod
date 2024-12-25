@@ -1,4 +1,4 @@
-module realtime-score
+module rest-api-go
 
 go 1.23.4
 

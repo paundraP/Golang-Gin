@@ -1,8 +1,8 @@
 package router
 
 import (
-	handler "realtime-score/internal/handlers"
-	"realtime-score/internal/middleware"
+	handler "rest-api-go/internal/handlers"
+	"rest-api-go/internal/middleware"
 
 	"github.com/gin-gonic/gin"
 )

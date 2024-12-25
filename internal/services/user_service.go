@@ -1,10 +1,10 @@
 package services
 
 import (
-	"realtime-score/internal/dto"
-	"realtime-score/internal/models"
-	"realtime-score/internal/pkg"
-	"realtime-score/internal/repository"
+	"rest-api-go/internal/dto"
+	"rest-api-go/internal/models"
+	"rest-api-go/internal/pkg"
+	"rest-api-go/internal/repository"
 	"time"
 
 	"github.com/google/uuid"

@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"net/http"
-	"realtime-score/internal/pkg"
+	"rest-api-go/internal/pkg"
 	"strings"
 
 	"github.com/gin-gonic/gin"
