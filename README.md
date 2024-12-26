@@ -95,7 +95,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 5. To add the table and seed them, run this
 
 ```bash 
-go run main.go --migrate --migrate
+go run main.go --migrate --seed
 ```
 
 or if you just want to run the program (dont forget to migrate the table first)
