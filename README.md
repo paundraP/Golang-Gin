@@ -93,6 +93,12 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 \q
 ```
 
+- if you haven't installed postgres and redis, you can use docker with :
+
+```bash 
+docker-compose up -d
+```
+
 5. To add the table and seed them, run this
 
 ```bash 
