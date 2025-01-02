@@ -34,6 +34,7 @@ func NewApp() AppConfig {
 
 	// handle cors
 	middleware.SetupCors(app)
+	app.Use(middleware.NewRateLimit("localhost:6379").Handler())
 
 	// handle migrate or seeder
 	cmd.MigrateOrSeed(db)
