@@ -34,7 +34,11 @@ func NewApp() AppConfig {
 
 	// handle cors
 	middleware.SetupCors(app)
-	app.Use(middleware.NewRateLimit("localhost:6379").Handler())
+
+	redisLimiter := pkg.SetupRedisLimiter("localhost:6379")
+
+	rateLimitMiddleware := middleware.NewRateLimit(redisLimiter)
+	app.Use(rateLimitMiddleware.Handler())
 
 	// handle migrate or seeder
 	cmd.MigrateOrSeed(db)

@@ -11,11 +11,11 @@ import (
 )
 
 type RateLimitMiddleware struct {
-	RedisLimiter *pkg.RedisLimiter
+	RedisLimiter pkg.Redis
 }
 
-func NewRateLimit(connStr string) *RateLimitMiddleware {
-	return &RateLimitMiddleware{pkg.SetupRedisLimiter(connStr)}
+func NewRateLimit(redisLimiter pkg.Redis) *RateLimitMiddleware {
+	return &RateLimitMiddleware{RedisLimiter: redisLimiter}
 }
 
 const RateRequest = "rate_request_%s"

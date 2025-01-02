@@ -8,11 +8,15 @@ import (
 	"github.com/redis/go-redis/v9"
 )
 
+type Redis interface {
+	Allow(ctx context.Context, key string, limit redis_rate.Limit) (*redis_rate.Result, error)
+}
+
 type RedisLimiter struct {
 	*redis_rate.Limiter
 }
 
-func SetupRedisLimiter(connStr string) *RedisLimiter {
+func SetupRedisLimiter(connStr string) Redis {
 	client := redis.NewClient(&redis.Options{
 		Addr: connStr,
 	})
@@ -21,5 +25,5 @@ func SetupRedisLimiter(connStr string) *RedisLimiter {
 		log.Fatalf("Error connecting to redis: %v", err)
 	}
 
-	return &RedisLimiter{redis_rate.NewLimiter(client)}
+	return &RedisLimiter{Limiter: redis_rate.NewLimiter(client)}
 }
