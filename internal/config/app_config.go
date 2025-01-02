@@ -2,6 +2,7 @@ package config
 
 import (
 	"fmt"
+	"os"
 	"rest-api-go/cmd"
 	handler "rest-api-go/internal/handlers"
 	"rest-api-go/internal/middleware"
@@ -34,8 +35,10 @@ func NewApp() AppConfig {
 
 	// handle cors
 	middleware.SetupCors(app)
-
-	redisLimiter := pkg.SetupRedisLimiter("localhost:6379")
+	redishost := os.Getenv("REDISHOST")
+	redisport := os.Getenv("REDISPORT")
+	redisConnStr := fmt.Sprintf("%s:%s", redishost, redisport)
+	redisLimiter := pkg.SetupRedisLimiter(redisConnStr)
 
 	rateLimitMiddleware := middleware.NewRateLimit(redisLimiter)
 	app.Use(rateLimitMiddleware.Handler())
