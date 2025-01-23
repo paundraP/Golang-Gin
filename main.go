@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
+	// testing
 	app := config.NewApp()
 	app.Run()
 }
