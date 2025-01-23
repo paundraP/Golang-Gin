@@ -1,3 +1,4 @@
 .env
 accessKeys.csv
 .vscode/
+.DS_Store
